@@ -17,17 +17,39 @@ if (intro) {
     intro.classList.add('intro--out')
     setTimeout(() => intro.remove(), 500)
   }
-  // Long enough to read, short enough not to be in the way.
-  setTimeout(dismiss, 1700)
+  // Long enough for the mark to land, short enough not to be in the way.
+  setTimeout(dismiss, 2300)
   intro.addEventListener('click', dismiss)
+}
+
+/* ── The haul lands when you finally reach the bottom ───────────────────── */
+
+const haul = document.getElementById('haul')
+if (haul) {
+  const land = () => haul.classList.add('haul--in')
+
+  // Fires once — a reward for getting to the end, not a loop.
+  const watcher = new IntersectionObserver(
+    (entries) => {
+      if (!entries[0].isIntersecting) return
+      land()
+      watcher.disconnect()
+    },
+    { threshold: 0.15 }
+  )
+  watcher.observe(haul)
+
+  // Never let an entrance animation be the reason content stays invisible.
+  setTimeout(land, 4000)
 }
 
 /* ── Cursor-reactive dot field, same idea as the app ────────────────────── */
 
-const canvas = document.querySelector('.stage__dots')
+const canvases = [...document.querySelectorAll('.stage__dots, .intro__dots')]
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-if (canvas && !reduced) {
+for (const canvas of canvases) {
+  if (reduced) break
   const ctx = canvas.getContext('2d')
   const SPACING = 30
   const RADIUS = 170
@@ -140,7 +162,7 @@ if (canvas && !reduced) {
   document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()))
   new ResizeObserver(resize).observe(canvas)
 
-  // Only animate while the stage is actually on screen.
+  // Only animate while the surface is actually on screen.
   new IntersectionObserver((entries) => {
     entries[0].isIntersecting ? start() : stop()
   }).observe(canvas)

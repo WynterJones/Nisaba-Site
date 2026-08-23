@@ -17,12 +17,16 @@
       property="og:description"
       content="The browser that makes your design research add up. Capture, extract, organize and convert — all on your own machine."
     />
-    <meta property="og:image" content="https://nisaba.wynter.ai/assets/hero-foxes.jpg" />
+    <meta property="og:image" content="https://nisaba.wynter.ai/assets/og.jpg?v=2" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Nisaba — Browse. Capture. Compound." />
+    <meta name="twitter:image" content="https://nisaba.wynter.ai/assets/og.jpg?v=2" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#0a0a0b" />
 
-    <link rel="icon" href="assets/icon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <link rel="icon" href="assets/icon.png?v=2" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icon.png?v=2" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,16 +41,23 @@
     <a class="skip" href="#main">Skip to content</a>
 
     <div class="intro" id="intro" aria-hidden>
-      <img class="intro__logo" src="assets/logo.png" alt="" width="380" height="82" />
-      <p class="intro__tagline">Browse. Capture. Compound.</p>
-      <p class="intro__version">v1.0</p>
+      <canvas class="intro__dots" aria-hidden></canvas>
+      <div class="intro__inner">
+        <img class="intro__logo" src="assets/logo.png?v=2" alt="" width="1014" height="300" />
+        <p class="intro__tagline">Browse. Capture. Compound.</p>
+        <p class="intro__version">Version 1.0</p>
+      </div>
+      <p class="intro__made">
+        <span>Made by</span>
+        <img src="assets/wynter.png?v=2" alt="Wynter.ai" width="140" height="30" />
+      </p>
     </div>
 
     <div class="stage">
       <canvas class="stage__dots" aria-hidden></canvas>
       <header class="masthead" id="top">
       <a class="masthead__brand" href="#top" aria-label="Nisaba home">
-        <img src="assets/logo.png" alt="Nisaba" width="380" height="82" />
+        <img src="assets/logo.png?v=2" alt="Nisaba" width="380" height="82" />
       </a>
       <nav class="masthead__nav" aria-label="Primary">
         <a href="#caper">How it works</a>
@@ -75,13 +86,49 @@
             <a class="btn btn--ghost btn--lg" href="#caper">See the caper</a>
           </div>
 
-          <p class="wink">
-            <span class="wink__tag">Public service announcement</span>
-            Not an everyday browser. Open it when your library needs to grow. <em>Wink.</em>
-          </p>
         </div>
 
-        <figure class="panel panel--hero">
+        <div class="hero__art">
+          <div class="float float--button" aria-hidden>
+            <span class="float__pin">1</span>
+            <span class="float__body"><span class="mini-btn">Get started</span></span>
+            <span class="float__label">Element</span>
+          </div>
+
+          <div class="float float--swatches" aria-hidden>
+            <span class="float__pin">2</span>
+            <span class="float__body">
+              <span class="mini-swatch" style="background:#7928db"></span>
+              <span class="mini-swatch" style="background:#a06bf0"></span>
+              <span class="mini-swatch" style="background:#f2ece0"></span>
+              <span class="mini-swatch" style="background:#17171b"></span>
+            </span>
+            <span class="float__label">Tokens</span>
+          </div>
+
+          <div class="float float--hero" aria-hidden>
+            <span class="float__pin">3</span>
+            <span class="float__body mini-hero">
+              <span class="mini-hero__bar"></span>
+              <span class="mini-hero__title"></span>
+              <span class="mini-hero__line"></span>
+              <span class="mini-hero__line mini-hero__line--short"></span>
+              <span class="mini-btn mini-btn--sm">Buy</span>
+            </span>
+            <span class="float__label">Section</span>
+          </div>
+
+          <div class="float float--price" aria-hidden>
+            <span class="float__pin">4</span>
+            <span class="float__body mini-card">
+              <span class="mini-card__plan">Starter</span>
+              <span class="mini-card__price">$0</span>
+              <span class="mini-hero__line mini-hero__line--short"></span>
+            </span>
+            <span class="float__label">Component</span>
+          </div>
+
+          <figure class="panel panel--hero">
           <img
             src="assets/hero-foxes.jpg"
             alt="Two cartoon fox spies in trench coats tugging a browser window between them"
@@ -90,8 +137,9 @@
             fetchpriority="high"
             decoding="async"
           />
-          <figcaption>Fox vs. Fox — the eternal struggle over one good hero section.</figcaption>
-        </figure>
+            <figcaption>Fox vs. Fox — the eternal struggle over one good hero section.</figcaption>
+          </figure>
+        </div>
       </section>
       </div>
 
@@ -246,7 +294,7 @@
 
         <div class="shot shot--audit">
           <img
-            src="assets/app-audit.png"
+            src="assets/app-audit.png?v=2"
             alt="Nisaba in audit mode: a localhost page with the review panel open on the right"
             width="1600"
             height="1000"
@@ -279,7 +327,7 @@
         </header>
         <div class="shot">
           <img
-            src="assets/app-browse.png"
+            src="assets/app-browse.png?v=2"
             alt="Nisaba in extract mode: a live page with the selection overlay active and the inspector open"
             width="1600"
             height="1000"
@@ -294,8 +342,8 @@
 
         <div class="shot shot--second">
           <img
-            src="assets/app-library.png"
-            alt="The Captures library showing saved screenshots of Vercel, Stripe and Linear"
+            src="assets/app-home.png?v=2"
+            alt="Nisaba's dashboard: the wordmark, one field, and the fox-vs-fox artwork behind it"
             width="1600"
             height="1000"
             loading="lazy"
@@ -303,8 +351,7 @@
           />
         </div>
         <p class="shot__caption">
-          And the payoff: every capture filed under its site, with the URL, dimensions and date it
-          was taken.
+          One field to start from, and a sidebar holding everything you have taken so far.
         </p>
       </section>
 
@@ -629,7 +676,7 @@
 
       <!-- ── Download ─────────────────────────────────────────────────── -->
       <section class="download" id="download">
-        <img class="download__icon" src="assets/icon.png" alt="" width="96" height="96" loading="lazy" />
+        <img class="download__icon" src="assets/icon.png?v=2" alt="" width="96" height="96" loading="lazy" />
         <h2>Go and grow your library.</h2>
         <p>
           Free, open source and MIT licensed. macOS only for now — it installs as a normal app and
@@ -650,9 +697,21 @@
       </section>
     </main>
 
+    <div class="haul" id="haul" aria-hidden>
+      <img
+        src="assets/haul.webp?v=2"
+        alt=""
+        width="1600"
+        height="672"
+        loading="lazy"
+        decoding="async"
+      />
+      <p class="haul__line">Off they go with the evidence.</p>
+    </div>
+
     <footer class="footer">
       <div>
-        <img src="assets/logo.png" alt="Nisaba" width="186" height="40" />
+        <img src="assets/logo.png?v=2" alt="Nisaba" width="186" height="40" />
         <p>
           Named for the Sumerian goddess of writing and record-keeping. She kept the accounts. So
           does this.
@@ -660,7 +719,7 @@
         <p class="footer__made">
           <span>Made by</span>
           <a href="https://wynter.ai" aria-label="Wynter.ai">
-            <img src="assets/wynter.png" alt="Wynter.ai" width="120" height="26" />
+            <img src="assets/wynter.png?v=2" alt="Wynter.ai" width="120" height="26" />
           </a>
         </p>
       </div>
