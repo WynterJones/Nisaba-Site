@@ -36,7 +36,15 @@
   <body>
     <a class="skip" href="#main">Skip to content</a>
 
-    <header class="masthead" id="top">
+    <div class="intro" id="intro" aria-hidden>
+      <img class="intro__logo" src="assets/logo.png" alt="" width="380" height="82" />
+      <p class="intro__tagline">Browse. Capture. Compound.</p>
+      <p class="intro__version">v1.0</p>
+    </div>
+
+    <div class="stage">
+      <canvas class="stage__dots" aria-hidden></canvas>
+      <header class="masthead" id="top">
       <a class="masthead__brand" href="#top" aria-label="Nisaba home">
         <img src="assets/logo.png" alt="Nisaba" width="380" height="82" />
       </a>
@@ -47,10 +55,10 @@
         <a href="#docs">Docs</a>
         <a href="https://github.com/WynterJones/Nisaba">GitHub</a>
         <a class="masthead__cta" href="#download">Download</a>
-      </nav>
-    </header>
+        </nav>
+      </header>
 
-    <main id="main">
+      <main id="main">
       <!-- ── Hero ─────────────────────────────────────────────────────── -->
       <section class="hero">
         <div class="hero__copy">
@@ -85,6 +93,7 @@
           <figcaption>Fox vs. Fox — the eternal struggle over one good hero section.</figcaption>
         </figure>
       </section>
+      </div>
 
       <!-- ── Problem ──────────────────────────────────────────────────── -->
       <section class="strip" id="problem">
