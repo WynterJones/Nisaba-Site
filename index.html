@@ -334,6 +334,20 @@
             </details>
 
             <details>
+              <summary><span class="dot"></span>Compare</summary>
+              <p>
+                Two captures, three ways: side by side, overlaid with an opacity slider, or as a
+                pixel difference that paints every change in purple and tells you what percentage
+                moved. Point it at a source reference and a later recapture to see what a site
+                changed, or at a screenshot of what you built to see how close you got.
+              </p>
+              <p>
+                The difference is computed locally in a canvas, and pixel equality is never the
+                goal — it is there to show you what moved, not to grade you.
+              </p>
+            </details>
+
+            <details>
               <summary><span class="dot"></span>Tasks drawer</summary>
               <p>
                 The bottom strip. Every agent job appears here with live progress, streaming logs,
@@ -506,13 +520,14 @@
               <li>Element Style Matrix with real hover and focus states</li>
               <li>Framework detection with confidence and evidence</li>
               <li>Workspaces, and agent jobs that actually run with streaming logs</li>
+              <li>Compare two captures side by side, overlaid, or by pixel difference</li>
               <li>Everything searchable, on your disk, exportable and importable</li>
             </ul>
           </div>
           <div class="status__col">
             <h3>Still to come</h3>
             <ul>
-              <li>Local preview of generated output, side by side with its source</li>
+              <li>Local preview of generated output, compared automatically as it runs</li>
               <li>Lint, build and test verification before a component is marked verified</li>
               <li>Visual similarity search across the library</li>
               <li>SQLite — the index is one JSON file today</li>
