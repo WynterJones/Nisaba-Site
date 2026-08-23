@@ -205,16 +205,31 @@
         <div class="shot">
           <img
             src="assets/app-browse.png"
-            alt="The Nisaba desktop app: sidebar library, browser tabs, a live page and the inspector panel showing extracted DOM, tokens, fonts and detected frameworks"
+            alt="Nisaba in extract mode: a live page with the selection overlay active and the inspector open"
             width="1600"
-            height="939"
+            height="1000"
             loading="lazy"
             decoding="async"
           />
         </div>
         <p class="shot__caption">
-          Tabs and a real page on the left. Everything Nisaba knows about your selection on the
-          right. Agent jobs streaming along the bottom.
+          Extract mode. Hover the live page, walk the DOM with the arrow keys, click to keep the
+          region — screenshot, selector, HTML, styles, tokens and all.
+        </p>
+
+        <div class="shot shot--second">
+          <img
+            src="assets/app-library.png"
+            alt="The Captures library showing saved screenshots of Vercel, Stripe and Linear"
+            width="1600"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p class="shot__caption">
+          And the payoff: every capture filed under its site, with the URL, dimensions and date it
+          was taken.
         </p>
       </section>
 
@@ -457,6 +472,44 @@
                 unless you turn them on.
               </p>
             </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Status ───────────────────────────────────────────────────── -->
+      <section class="status">
+        <header class="section-head">
+          <p class="kicker">Straight answer</p>
+          <h2>What works today.</h2>
+          <p class="section-sub">
+            Nisaba is being built in the open, in phases. Here is the honest line between shipped
+            and specified — the app says the same thing on screens that are not done yet.
+          </p>
+        </header>
+
+        <div class="status__grid">
+          <div class="status__col status__col--done">
+            <h3>Working now</h3>
+            <ul>
+              <li>Multi-tab browsing in fully isolated views</li>
+              <li>Capture the viewport, the whole scrollable page, or a dragged region</li>
+              <li>Hover-to-select extraction with arrow-key DOM navigation</li>
+              <li>Selector, sanitized HTML, computed styles and CSS custom properties</li>
+              <li>Fonts, palette, assets and accessibility metadata</li>
+              <li>Framework detection with confidence and evidence</li>
+              <li>Captures, Sections, Sites and Bookmarks, searchable and on your disk</li>
+              <li>Claude Code and Codex CLI detection, with a resolved-prompt preview</li>
+            </ul>
+          </div>
+          <div class="status__col">
+            <h3>Still to come</h3>
+            <ul>
+              <li>Annotation editor for captures</li>
+              <li>Design system extraction and <code>design.md</code></li>
+              <li>Element Style Matrix, Components and Templates</li>
+              <li>Running agent jobs and verifying their output</li>
+              <li>Workspaces and portable export</li>
+            </ul>
           </div>
         </div>
       </section>
