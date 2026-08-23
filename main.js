@@ -1,14 +1,12 @@
-// Label the download buttons with the visitor's platform. Everything else is CSS.
-const platform = (() => {
-  const ua = navigator.userAgent
-  if (/Mac/i.test(ua)) return 'macOS'
-  if (/Win/i.test(ua)) return 'Windows'
-  if (/Linux|X11/i.test(ua)) return 'Linux'
-  return null
-})()
+// Nisaba ships for macOS today. Everyone else gets pointed at building from source.
+const isMac = /Mac/i.test(navigator.userAgent)
 
-if (platform) {
-  for (const el of document.querySelectorAll('[data-download-label]')) {
-    el.textContent = el.textContent.trim() === 'Download' ? `Download for ${platform}` : el.textContent
+if (!isMac) {
+  const note = document.querySelector('[data-other-platform]')
+  if (note) {
+    note.insertAdjacentHTML(
+      'afterbegin',
+      '<strong>Nisaba ships for macOS today.</strong> On Windows or Linux you can still run it — '
+    )
   }
 }
