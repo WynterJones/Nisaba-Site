@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nisaba — Browse. Capture. Compound.</title>
+    <meta
+      name="description"
+      content="A desktop browser for designers and developers. Every capture keeps its source, DOM, CSS and fonts — then an agent turns it into real code. Local-first, open source, free."
+    />
+    <link rel="canonical" href="https://nisaba.wynter.ai/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nisaba.wynter.ai/" />
+    <meta property="og:title" content="Nisaba — Browse. Capture. Compound." />
+    <meta
+      property="og:description"
+      content="The browser that makes your design research add up. Capture, extract, organize and convert — all on your own machine."
+    />
+    <meta property="og:image" content="https://nisaba.wynter.ai/assets/hero-foxes.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0a0a0b" />
+
+    <link rel="icon" href="assets/icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="nav" id="top">
+      <a class="nav__brand" href="#top" aria-label="Nisaba home">
+        <img src="assets/logo.png" alt="Nisaba" width="163" height="35" />
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#caper">How it works</a>
+        <a href="#library">The library</a>
+        <a href="#docs">Docs</a>
+        <a href="https://github.com/WynterJones/Nisaba">GitHub</a>
+      </nav>
+
+      <a class="btn btn--sm" href="#download">Download</a>
+    </header>
+
+    <main id="main">
+      <!-- ── Hero ─────────────────────────────────────────────────────── -->
+      <section class="hero">
+        <div class="hero__copy">
+          <p class="eyebrow">A desktop browser · macOS · Windows · Linux</p>
+          <h1>Browse.<br />Capture.<br /><span class="ink-purple">Compound.</span></h1>
+          <p class="lede">
+            You find a pricing section you love. You screenshot it. Three months later you own a
+            folder of 4,000 PNGs and no idea where any of them came from.
+            <strong>Nisaba is the browser that fixes that.</strong>
+          </p>
+
+          <div class="cta">
+            <a class="btn btn--lg" href="#download" data-download-label>Download free</a>
+            <a class="btn btn--ghost btn--lg" href="#caper">See the caper</a>
+          </div>
+
+          <p class="wink">
+            <span class="wink__tag">Public service announcement</span>
+            Not an everyday browser. Open it when your library needs to grow. <em>Wink.</em>
+          </p>
+        </div>
+
+        <figure class="panel panel--hero">
+          <img
+            src="assets/hero-foxes.jpg"
+            alt="Two cartoon fox spies in trench coats tugging a browser window between them"
+            width="1200"
+            height="654"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <figcaption>Fox vs. Fox — the eternal struggle over one good hero section.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ── Problem ──────────────────────────────────────────────────── -->
+      <section class="strip" id="problem">
+        <figure class="panel panel--tilt-l">
+          <img
+            src="assets/panel-problem.jpg"
+            alt="A cartoon fox detective buried in an avalanche of unlabeled screenshots"
+            width="1200"
+            height="654"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Exhibit A: the screenshots folder.</figcaption>
+        </figure>
+
+        <div class="strip__copy">
+          <p class="kicker">The problem</p>
+          <h2>A screenshot is a souvenir, not a source.</h2>
+          <p>
+            A PNG remembers what something looked like. It forgets the URL, the font stack, the grid,
+            the spacing scale, the hover state and the library that built it. Everything that would
+            let you actually <em>use</em> it again is the part your screenshot tool throws away.
+          </p>
+          <ul class="checks">
+            <li>Where did this come from?</li>
+            <li>What font is that, really?</li>
+            <li>How was that grid put together?</li>
+            <li>Did I already save this one twice?</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── The caper ────────────────────────────────────────────────── -->
+      <section class="caper" id="caper">
+        <header class="section-head">
+          <p class="kicker">How it works</p>
+          <h2>The caper, in three panels.</h2>
+          <p class="section-sub">
+            Browse like normal. Nisaba quietly keeps the evidence.
+          </p>
+        </header>
+
+        <ol class="panels">
+          <li class="panel-card">
+            <figure class="panel">
+              <img
+                src="assets/panel-capture.jpg"
+                alt="A fox spy photographing a website with an oversized flash camera"
+                width="1200"
+                height="654"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Panel one</figcaption>
+            </figure>
+            <h3><span class="num">1</span> Capture</h3>
+            <p>
+              Viewport, full page, a dragged region or a single element. Annotate with arrows, blur
+              and callouts — stored as editable vectors, so the original pixels stay untouched.
+              Source URL, title, viewport and timestamp ride along automatically.
+            </p>
+          </li>
+
+          <li class="panel-card">
+            <figure class="panel">
+              <img
+                src="assets/panel-extract.jpg"
+                alt="A fox spy lifting a pricing card out of a webpage with tweezers"
+                width="1200"
+                height="654"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Panel two</figcaption>
+            </figure>
+            <h3><span class="num">2</span> Extract</h3>
+            <p>
+              Hover the page and the DOM outlines itself. Click a section and Nisaba keeps its
+              sanitized HTML, matched CSS, computed styles, custom properties, fonts, assets and
+              accessibility tree — plus a selector that still finds it later.
+            </p>
+          </li>
+
+          <li class="panel-card">
+            <figure class="panel">
+              <img
+                src="assets/panel-convert.jpg"
+                alt="A fox spy cranking a machine that turns a website section into printed code"
+                width="1200"
+                height="654"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Panel three</figcaption>
+            </figure>
+            <h3><span class="num">3</span> Convert</h3>
+            <p>
+              Hand a saved section to Claude Code or Codex — the CLI you already have installed.
+              Out comes a component in React, Tailwind, shadcn/ui, Next.js or plain HTML, previewed
+              side by side with the original so you can send corrections back.
+            </p>
+          </li>
+        </ol>
+
+        <p class="fineprint">
+          Genericized by default: layout theory in, someone else's branding and copy out. You are
+          stealing the <em>idea</em>, not the trade dress.
+        </p>
+      </section>
+
+      <!-- ── App shot ─────────────────────────────────────────────────── -->
+      <section class="showcase">
+        <header class="section-head">
+          <p class="kicker">The app</p>
+          <h2>A real browser, with the evidence room attached.</h2>
+        </header>
+        <div class="shot">
+          <img
+            src="assets/app-browse.png"
+            alt="The Nisaba desktop app: sidebar library, browser tabs, a live page and the inspector panel showing extracted DOM, tokens, fonts and detected frameworks"
+            width="1600"
+            height="939"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p class="shot__caption">
+          Tabs and a real page on the left. Everything Nisaba knows about your selection on the
+          right. Agent jobs streaming along the bottom.
+        </p>
+      </section>
+
+      <!-- ── Library ──────────────────────────────────────────────────── -->
+      <section class="library" id="library">
+        <header class="section-head">
+          <p class="kicker">The payoff</p>
+          <h2>Nine kinds of evidence. One filing cabinet.</h2>
+          <p class="section-sub">
+            Nisaba doesn't store a pile of images. It stores typed artifacts that know about each
+            other — so a section can tell you its site, its capture, its tokens and every component
+            it later produced.
+          </p>
+        </header>
+
+        <ul class="cards">
+          <li><b>Sites</b><span>One canonical record per domain, with everything you ever took from it.</span></li>
+          <li><b>Bookmarks</b><span>Pages worth returning to. Paste a whole list at once, one URL per line.</span></li>
+          <li><b>Captures</b><span>Screenshots with their annotations kept separate from the original pixels.</span></li>
+          <li><b>Sections</b><span>Reusable page regions: screenshot, HTML, styles, assets, provenance.</span></li>
+          <li><b>Elements</b><span>Buttons, inputs and cards normalized so you can compare them across sites.</span></li>
+          <li><b>Design Systems</b><span>Colors, type, spacing, radii and motion inferred into editable tokens.</span></li>
+          <li><b>Components</b><span>Generated implementations, verified against the source that inspired them.</span></li>
+          <li><b>Templates</b><span>Whole pages assembled from sections you collected months apart.</span></li>
+          <li><b>Resources</b><span>Icon sets, UI kits, fonts and repos, with licenses and package metadata.</span></li>
+        </ul>
+      </section>
+
+      <!-- ── Trust ────────────────────────────────────────────────────── -->
+      <section class="trust">
+        <div class="trust__item">
+          <h3>Local first, permanently</h3>
+          <p>
+            SQLite and plain files on your disk, in folders you pick. No account, no sync, no
+            telemetry. Uninstalling Nisaba does not take your library with it.
+          </p>
+        </div>
+        <div class="trust__item">
+          <h3>Every page is a suspect</h3>
+          <p>
+            Sites run in isolated views with no Node, no preload bridge and every permission denied
+            by default. Text scraped from a page is treated as data — never as instructions to an
+            agent.
+          </p>
+        </div>
+        <div class="trust__item">
+          <h3>Your agent, your keys</h3>
+          <p>
+            Nisaba drives the Claude Code or Codex CLI you already installed and authenticated. It
+            shows you the resolved prompt and the target folder before anything is written.
+          </p>
+        </div>
+      </section>
+
+      <!-- ── Docs ─────────────────────────────────────────────────────── -->
+      <section class="docs" id="docs">
+        <header class="section-head">
+          <p class="kicker">Field manual</p>
+          <h2>Every screen, explained.</h2>
+          <p class="section-sub">
+            Fourteen destinations in the sidebar, plus three surfaces that follow you everywhere.
+            Here is what each one is for.
+          </p>
+        </header>
+
+        <div class="docs__grid">
+          <div class="docs__group">
+            <h3 class="docs__groupname">Working surfaces</h3>
+
+            <details open>
+              <summary><span class="dot"></span>Home</summary>
+              <p>
+                The landing screen. One field that searches your library <em>or</em> takes a URL,
+                four quick-capture actions, live counts for every library type, your recent captures
+                and whatever the agent is currently running. Built to get you browsing in one
+                keystroke.
+              </p>
+            </details>
+
+            <details>
+              <summary><span class="dot"></span>Browse</summary>
+              <p>
+                The actual browser: tabs, back/forward/reload, a URL field that falls back to web
+                search, viewport presets and the Capture / Extract / Convert toolbar. The page
+                itself runs in an isolated native view, so it never touches Nisaba's internals.
+              </p>
+              <p>
+                Turning on <b>Extract</b> makes the page hover-selectable — arrow keys walk the DOM
+                to the parent, child or sibling of whatever you're pointing at.
+              </p>
+            </details>
+
+            <details>
+              <summary><span class="dot"></span>Inspector</summary>
+              <p>
+                The right-hand panel, in three tabs. <b>Inspect</b> shows the selection's name,
+                screenshot, DOM summary, CSS custom properties, fonts, colors, detected
+                dependencies and framework guesses — every detection carrying a confidence score and
+                its evidence. <b>Assets</b> lists the images, icons, SVG and fonts found inside it.
+                <b>AI</b> is where you choose an output profile and agent before converting.
+              </p>
+            </details>
+
+            <details>
+              <summary><span class="dot"></span>Tasks drawer</summary>
+              <p>
+                The bottom strip. Every agent job appears here with live progress, streaming logs,
+                cancel and retry. It survives a restart — a job that was running when the app closed
+                gets reconciled rather than silently lost.
+              </p>
+            </details>
+
+            <details>
+              <summary><span class="dot"></span>Command palette</summary>
+              <p>
+                <kbd>⌘K</kbd> from anywhere. Jump to any library, reopen any tab, or type a URL to
+                open it in a new one. It is the fastest path between "I want to look at that" and
+                looking at it.
+              </p>
+            </details>
+          </div>
+
+          <div class="docs__group">
+            <h3 class="docs__groupname">Capture &amp; organize</h3>
+
+            <details>
+              <summary><span class="dot"></span>Bookmarks</summary>
+              <p>
+                Links worth keeping, with tags, collections, notes and a status. Bulk add takes a
+                pasted list — <b>one URL per line</b>, schemes optional, duplicates and blank lines
+                dropped automatically. Broken links get flagged rather than deleted.
+              </p>
+            </details>
+
+            <details>
+              <summary><span class="dot"></span>Captures</summary>
+              <p>
+                Every screenshot you've taken, grid or table, filtered by site, tag, date or
+                viewport. Each one keeps its source URL, page title, scale factor and scroll
+                position, with the annotation layer stored separately so the original is always
+                recoverable.
+              </p>
+            </details>
+
+            <details>
+              <summary><span class="dot"></span>Sections</summary>
+              <p>
+                The good stuff: reusable page regions typed as Hero, Pricing, Navigation, Form,
+                Testimonial, Footer and so on. A section carries its screenshot, selector, sanitized
+                HTML, matched styles, downloaded assets, accessibility metadata and a full trail back
+                to the page it came from.
+              </p>
+            </details>
+
+            <details>
+              <summary><span class="dot"></span>Elements</summary>
+              <p>
+                The Element Style Matrix. Buttons, inputs, checkboxes, cards, badges, modals and
+                tables normalized into categories, with their variants and interaction states —
+                hover, focus, disabled, open — stored independently. Put forty pricing cards from
+                forty sites side by side and the patterns get obvious fast.
+              </p>
+            </details>
+
+            
+            
+            
+            <details>
+              <summary><span class="dot"></span>Resources</summary>
+              <p>
+                The tools rather than the designs: icon libraries, UI kits, font collections,
+                repositories. Classified on save with package metadata, repository links and license
+                where they can be found, and cross-linked to every site and section that uses them.
+              </p>
+            </details>
+
+            <details>
+              <summary><span class="dot"></span>Sites</summary>
+              <p>
+                One record per domain — favicon, notes, tags, detected technology and every capture,
+                section and bookmark you have taken from it. Recapture later and Nisaba will show
+                you what changed.
+              </p>
+            </details>
+          </div>
+
+          <div class="docs__group">
+            <h3 class="docs__groupname">Build &amp; system</h3>
+<details>
+              <summary><span class="dot"></span>Design Systems</summary>
+              <p>
+                A site's design language, extracted: color roles, type hierarchy, spacing and radius
+                scales, breakpoints and observable motion. Exports as an editable
+                <code>design.md</code>, <code>tokens.json</code> and <code>site-profile.json</code>.
+                Observed values and inferred ones are always labeled differently — Nisaba never
+                pretends a guess is a fact.
+              </p>
+            </details>
+<details>
+              <summary><span class="dot"></span>Components</summary>
+              <p>
+                What the agent built. Each component keeps its files, framework, preview, the exact
+                prompt profile used, the job that produced it and the sections it came from. Every
+                generated version is preserved, so you can roll back.
+              </p>
+            </details>
+<details>
+              <summary><span class="dot"></span>Templates</summary>
+              <p>
+                Multi-section pages. Order saved sections into an outline, choose what to keep and
+                what to genericize, and let the agent assemble the whole thing inside a folder you
+                nominated.
+              </p>
+            </details>
+
+            <details>
+              <summary><span class="dot"></span>Jobs</summary>
+              <p>
+                The full history of agent runs, not just the ones currently going. Inputs, resolved
+                prompt, adapter, streamed events, logs, output files, status and timings — kept so
+                you can see exactly what produced a component months later.
+              </p>
+            </details>
+
+            <details>
+              <summary><span class="dot"></span>Workspaces</summary>
+              <p>
+                A workspace is a root folder plus an output stack, prompt profile, agent and
+                permission scope. Jobs can only write inside an approved workspace, and Nisaba shows
+                you the command, the working directory and the permissions before the first
+                write-enabled run.
+              </p>
+            </details>
+
+            <details>
+              <summary><span class="dot"></span>Settings</summary>
+              <p>
+                Where your library, components and templates live on disk. Which agent CLIs are
+                detected and authenticated. Sanitization defaults for saved HTML. Diagnostics — off
+                unless you turn them on.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Download ─────────────────────────────────────────────────── -->
+      <section class="download" id="download">
+        <img class="download__icon" src="assets/icon.png" alt="" width="96" height="96" loading="lazy" />
+        <h2>Go and grow your library.</h2>
+        <p>
+          Free, open source and MIT licensed. Installs for macOS, Windows and Linux, and updates
+          itself from GitHub Releases.
+        </p>
+        <div class="cta cta--center">
+          <a class="btn btn--lg" href="https://github.com/WynterJones/Nisaba/releases" data-download-label>
+            Download
+          </a>
+          <a class="btn btn--ghost btn--lg" href="https://github.com/WynterJones/Nisaba">
+            View the source
+          </a>
+        </div>
+        <p class="download__note">
+          Building from source? <code>git clone</code>, <code>npm install</code>,
+          <code>npm run dev</code>. That's the whole ritual.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <img src="assets/logo.png" alt="Nisaba" width="186" height="40" />
+        <p>
+          Named for the Sumerian goddess of writing and record-keeping. She kept the accounts. So
+          does this.
+        </p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#caper">How it works</a>
+        <a href="#docs">Docs</a>
+        <a href="https://github.com/WynterJones/Nisaba">GitHub</a>
+        <a href="https://github.com/WynterJones/Nisaba/releases">Releases</a>
+      </nav>
+      <p class="footer__legal">
+        MIT © <a href="https://github.com/WynterJones">Wynter Jones</a>. No foxes were harmed;
+        several hero sections were.
+      </p>
+    </footer>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
