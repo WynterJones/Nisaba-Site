@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nisaba — Browse. Capture. Compound.</title>
+    <title>Nisaba 1.0 — Browse. Capture. Compound.</title>
     <meta
       name="description"
       content="A desktop browser for designers and developers. Every capture keeps its source, DOM, CSS and fonts — then an agent turns it into real code. Local-first, open source, free."
@@ -36,26 +36,25 @@
   <body>
     <a class="skip" href="#main">Skip to content</a>
 
-    <header class="nav" id="top">
-      <a class="nav__brand" href="#top" aria-label="Nisaba home">
-        <img src="assets/logo.png" alt="Nisaba" width="163" height="35" />
+    <header class="masthead" id="top">
+      <a class="masthead__brand" href="#top" aria-label="Nisaba home">
+        <img src="assets/logo.png" alt="Nisaba" width="380" height="82" />
       </a>
-
-      <nav class="nav__links" aria-label="Primary">
+      <nav class="masthead__nav" aria-label="Primary">
         <a href="#caper">How it works</a>
+        <a href="#redline">Redline</a>
         <a href="#library">The library</a>
         <a href="#docs">Docs</a>
         <a href="https://github.com/WynterJones/Nisaba">GitHub</a>
+        <a class="masthead__cta" href="#download">Download</a>
       </nav>
-
-      <a class="btn btn--sm" href="#download">Download</a>
     </header>
 
     <main id="main">
       <!-- ── Hero ─────────────────────────────────────────────────────── -->
       <section class="hero">
         <div class="hero__copy">
-          <p class="eyebrow">A desktop browser · macOS · Windows · Linux</p>
+          <p class="eyebrow"><span class="badge-v1">v1.0</span> A desktop browser · macOS · Windows · Linux</p>
           <h1>Browse.<br />Capture.<br /><span class="ink-purple">Compound.</span></h1>
           <p class="lede">
             You find a pricing section you love. You screenshot it. Three months later you own a
@@ -194,6 +193,77 @@
           Genericized by default: layout theory in, someone else's branding and copy out. You are
           stealing the <em>idea</em>, not the trade dress.
         </p>
+      </section>
+
+      <!-- ── Redline ──────────────────────────────────────────────────── -->
+      <section class="redline" id="redline">
+        <header class="section-head">
+          <p class="kicker">The other half</p>
+          <h2>Redline a page. Hand it to an agent.</h2>
+          <p class="section-sub">
+            Nisaba is not only for stealing good ideas — it is also for fixing your own pages.
+            Open your site, live or on <code>localhost</code>, and click your way down it.
+          </p>
+        </header>
+
+        <ol class="redline__steps">
+          <li>
+            <span class="redline__num">1</span>
+            <h3>Click what is wrong</h3>
+            <p>
+              Every click pins a numbered note to that exact element. Type what needs fixing, set a
+              priority, tag it — spacing, copy, colour, accessibility, whatever it is.
+            </p>
+          </li>
+          <li>
+            <span class="redline__num">2</span>
+            <h3>Nisaba finds it in your code</h3>
+            <p>
+              Each pin keeps its selector, its computed styles and a screenshot — then greps your
+              workspace for the test id, text or class name it carries and tells you which file
+              probably renders it, with a confidence score.
+            </p>
+          </li>
+          <li>
+            <span class="redline__num">3</span>
+            <h3>Export the plan</h3>
+            <p>
+              Out comes a folder: <code>TASKS.md</code> ordered by priority, <code>plan.json</code>
+              with every element’s markup, and a screenshot per task. Point an agent at it and let
+              it work down the list.
+            </p>
+          </li>
+        </ol>
+
+        <div class="shot shot--redline">
+          <img
+            src="assets/app-redline.png"
+            alt="Nisaba in redline mode: a localhost page with the review panel open on the right"
+            width="1600"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p class="shot__caption">
+          Reviewing a localhost page. The panel on the right is where the notes go — it cannot live
+          in the page, because the page is the thing being reviewed.
+        </p>
+
+        <div class="redline__sample">
+          <div class="redline__sample-head">TASKS.md</div>
+<pre><code>### 1. [high · spacing] Heading sits too close to the subhead
+
+- **Selector**: `html &gt; body &gt; section:nth-of-type(1) &gt; h1`
+  - if that misses: `h1.hero-title`
+- **Element**: `&lt;h1&gt;` — “Ship faster with fewer meetings”
+- **Likely source**: `src/components/Hero.tsx:4` — matched on class
+  `hero-title` (70% confidence)
+- **Box**: 792×72 at (40, 80)
+- **Screenshot**: `shots/01-heading-sits-too-close.png`
+- **Computed now**: `margin: 0px 0px 4px`; `font-size: 48px`
+- [ ] Done</code></pre>
+        </div>
       </section>
 
       <!-- ── App shot ─────────────────────────────────────────────────── -->
@@ -370,6 +440,18 @@
             <h3 class="docs__groupname">Capture &amp; organize</h3>
 
             <details>
+              <summary><span class="dot"></span>Redlines</summary>
+              <p>
+                Every page review you have run. Each one keeps its pins — the note, the priority,
+                the category, the element it points at and the file Nisaba matched it to — plus
+                where the plan was exported.
+              </p>
+              <p>
+                Reopen the page to carry on, or export the plan again after the code has moved.
+              </p>
+            </details>
+
+            <details>
               <summary><span class="dot"></span>Bookmarks</summary>
               <p>
                 Links worth keeping, with tags, collections, notes and a status. Bulk add takes a
@@ -499,39 +581,41 @@
       <!-- ── Status ───────────────────────────────────────────────────── -->
       <section class="status">
         <header class="section-head">
-          <p class="kicker">Straight answer</p>
-          <h2>What works today.</h2>
+          <p class="kicker">Shipped</p>
+          <h2>Nisaba 1.0 is done.</h2>
           <p class="section-sub">
-            Nisaba is being built in the open, in phases. Here is the honest line between shipped
-            and specified — the app says the same thing on screens that are not done yet.
+            The whole loop works today — browse, capture, redline, extract, profile, organize,
+            convert and export. Free, open source, and entirely on your machine.
           </p>
         </header>
 
         <div class="status__grid">
           <div class="status__col status__col--done">
-            <h3>Working now</h3>
+            <h3>In 1.0</h3>
             <ul>
               <li>Multi-tab browsing in fully isolated views</li>
-              <li>Capture the viewport, the whole scrollable page, or a dragged region</li>
+              <li>Viewport, full-page, region and element capture</li>
+              <li>Annotation editor — arrows, blur, highlight, numbered callouts</li>
               <li>Hover-to-select extraction with arrow-key DOM navigation</li>
-              <li>Selector, sanitized HTML, computed styles and CSS custom properties</li>
-              <li>Annotation editor — arrows, blur, highlight, numbered callouts, stored as vectors</li>
-              <li>Design profiling into an editable <code>design.md</code> and <code>tokens.json</code></li>
+              <li>Redline reviews, matched to the files in your workspace</li>
+              <li>Design profiling into <code>design.md</code> and <code>tokens.json</code></li>
               <li>Element Style Matrix with real hover and focus states</li>
-              <li>Framework detection with confidence and evidence</li>
-              <li>Workspaces, and agent jobs that actually run with streaming logs</li>
-              <li>Compare two captures side by side, overlaid, or by pixel difference</li>
-              <li>Everything searchable, on your disk, exportable and importable</li>
+              <li>Compare, by side, overlay or pixel difference</li>
+              <li>Agent jobs with streaming logs and a resolved-prompt preview</li>
+              <li>Portable export and import of the whole library</li>
             </ul>
           </div>
           <div class="status__col">
-            <h3>Still to come</h3>
+            <h3>Where it goes next</h3>
             <ul>
               <li>Local preview of generated output, compared automatically as it runs</li>
-              <li>Lint, build and test verification before a component is marked verified</li>
+              <li>Lint, build and test checks before a component is marked verified</li>
               <li>Visual similarity search across the library</li>
-              <li>SQLite — the index is one JSON file today</li>
+              <li>SQLite in place of the single JSON index</li>
             </ul>
+            <p class="status__note">
+              None of it blocks the loop you can run today — it makes the last mile shorter.
+            </p>
           </div>
         </div>
       </section>
@@ -569,6 +653,7 @@
       </div>
       <nav aria-label="Footer">
         <a href="#caper">How it works</a>
+        <a href="#redline">Redline</a>
         <a href="#docs">Docs</a>
         <a href="https://github.com/WynterJones/Nisaba">GitHub</a>
         <a href="https://github.com/WynterJones/Nisaba/releases">Releases</a>

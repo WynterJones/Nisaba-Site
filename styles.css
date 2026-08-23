@@ -183,62 +183,98 @@ kbd {
   box-shadow: 6px 6px 0 var(--ink-3);
 }
 
-/* ── Nav ──────────────────────────────────────────────────────────────── */
+/* ── Masthead ─────────────────────────────────────────────────────────── */
 
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
+.masthead {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: clamp(0.6rem, 3vw, 3rem);
-  padding: 0.85rem var(--gutter);
-  background: color-mix(in srgb, var(--ink) 82%, transparent);
-  backdrop-filter: blur(14px) saturate(140%);
+  gap: clamp(1rem, 3vw, 1.6rem);
+  padding: clamp(2rem, 5vw, 3.25rem) var(--gutter) clamp(1.25rem, 3vw, 2rem);
+  text-align: center;
   border-bottom: 1px solid var(--line);
 }
 
-.nav__brand img {
-  height: 35px;
-  width: auto;
-  mix-blend-mode: screen;
+.masthead__brand {
+  position: relative;
+  display: block;
 }
 
-.nav__links {
+/* The logo asset is keyed transparent, so it can carry a real glow. */
+.masthead__brand img {
+  height: clamp(58px, 9vw, 96px);
+  width: auto;
+  filter: drop-shadow(0 8px 34px rgb(121 40 219 / 0.45));
+}
+
+.masthead__nav {
   display: flex;
-  gap: clamp(0.75rem, 2.5vw, 1.75rem);
-  margin-right: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 1.4rem);
   font-size: 0.9375rem;
   font-weight: 500;
 }
 
-.nav__links a {
+.masthead__nav a {
+  position: relative;
   color: var(--fg-dim);
   text-decoration: none;
-  transition: color 120ms ease;
+  padding: 0.35rem 0.1rem;
+  transition: color 140ms ease;
 }
 
-.nav__links a:hover {
+.masthead__nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--purple-bright);
+  transform: scaleX(0);
+  transition: transform 160ms ease;
+}
+
+.masthead__nav a:hover {
   color: var(--fg);
 }
 
-@media (max-width: 640px) {
-  .nav__links {
-    display: none;
-  }
+.masthead__nav a:hover::after {
+  transform: scaleX(1);
+}
 
-  .nav__brand {
-    margin-right: auto;
-    min-width: 0;
-  }
+.masthead__cta {
+  margin-left: clamp(0.25rem, 2vw, 0.75rem);
+  background: var(--purple);
+  color: #fff !important;
+  border: 2px solid #000;
+  border-radius: 9px;
+  box-shadow: 3px 3px 0 #000;
+  padding: 0.45rem 1rem !important;
+  font-weight: 600;
+}
 
-  .nav__brand img {
-    height: 28px;
-  }
+.masthead__cta::after {
+  display: none;
+}
 
-  .btn {
-    white-space: normal;
-  }
+.masthead__cta:hover {
+  background: var(--purple-bright);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 #000;
+}
+
+.badge-v1 {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 5px;
+  background: var(--purple);
+  color: #fff;
+  letter-spacing: 0.06em;
 }
 
 /* ── Comic panels ─────────────────────────────────────────────────────── */
@@ -513,6 +549,100 @@ kbd {
 
 .fineprint em {
   color: var(--fg-dim);
+}
+
+/* ── Redline ──────────────────────────────────────────────────────────── */
+
+.redline {
+  max-width: var(--max);
+  margin-inline: auto;
+  padding: 0 var(--gutter) var(--stack);
+}
+
+.redline__steps {
+  list-style: none;
+  margin: 0 0 clamp(2rem, 5vw, 3rem);
+  padding: 0;
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.25rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  counter-reset: step;
+}
+
+.redline__steps li {
+  position: relative;
+  padding-top: 1.25rem;
+  border-top: 3px solid var(--purple);
+}
+
+.redline__num {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--purple);
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  font-family: var(--display);
+  font-size: 0.95rem;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.redline__steps h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.6rem;
+}
+
+.redline__steps p {
+  color: var(--fg-dim);
+  font-size: 0.9rem;
+}
+
+.shot--redline {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.redline__sample {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--ink-2);
+  box-shadow: 0 30px 70px -50px var(--purple);
+}
+
+.redline__sample-head {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--fg-faint);
+  background: var(--ink-3);
+}
+
+.redline__sample pre {
+  margin: 0;
+  padding: 1.25rem;
+  overflow-x: auto;
+}
+
+.redline__sample code {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--fg-dim);
+  white-space: pre;
+}
+
+.status__note {
+  margin-top: 1rem;
+  color: var(--fg-faint);
+  font-size: 0.8125rem;
 }
 
 /* ── App showcase ─────────────────────────────────────────────────────── */
@@ -837,7 +967,6 @@ kbd {
 .footer img {
   height: 40px;
   width: auto;
-  mix-blend-mode: screen;
   margin-bottom: 0.9rem;
 }
 
